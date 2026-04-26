@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuwen Zhong | 钟勖文</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1 class="en-name">Xuwen Zhong</h1>
+                <h2 class="zh-name">钟勖文</h2>
+                <p class="tagline">临床医学 / 北大医学部</p>
+            </div>
+            
+            <nav class="nav-links">
+                <!-- 邮箱使用了简单的 JavaScript 混淆防止爬虫 -->
+                <a href="#" id="email-link" title="点击发送邮件">Email</a>
+                <a href="https://github.com/AuThrall" target="_blank">GitHub</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>最近更新: 2026年4月</p>
+            </div>
+        </aside>
+
+        <!-- 右侧主内容 -->
+        <main class="main-content">
+            <!-- 教育背景 -->
+            <section id="education">
+                <h2>教育背景</h2>
+                <div class="item">
+                    <span class="date">2024 - 至今</span>
+                    <div class="details">
+                        <strong>北京大学医学部</strong> · 临床医学
+                        <p>主要兴趣：生物信息学、临床数据科学。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 研究与项目 -->
+            <section id="projects">
+                <h2>研究与项目</h2>
+                <div class="item">
+                    <span class="date">2026</span>
+                    <div class="details">
+                        <strong>项目名称 A</strong>
+                        <p>待补充</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="date">2025</span>
+                    <div class="details">
+                        <strong>项目名称 B</strong>
+                        <p>待补充</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技能 -->
+            <section id="skills">
+                <h2>专业技能</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <strong>编程语言:</strong> <span>R, Python</span>
+                    </div>
+                    <div class="skill-group">
+                        <strong>效率工具:</strong> <span>Notion, Git, LaTeX</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // 这里的字符串是 "mailto:zhongxuwen595@gmail.com" 的 Base64 编码
+        const encodedEmail = "bWFpbHRvOnpob25neHV3ZW41OTVAZ21haWwuY29t"; 
+        const emailLink = document.getElementById('email-link');
+        
+        emailLink.addEventListener('mouseover', function() {
+            if (this.getAttribute('href') === '#') {
+                this.setAttribute('href', atob(encodedEmail));
+            }
+        });
+
+        emailLink.addEventListener('click', function() {
+            this.setAttribute('href', atob(encodedEmail));
+        });
+    </script>
+</body>
+</html>
